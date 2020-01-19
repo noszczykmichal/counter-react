@@ -5,9 +5,9 @@ import Counter from './Counter';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" className="text-center">
       {/* ustawiamy propsy które będzie można ustawiać w Counter.js */}
-      <Counter name="Licznik" value="108" test="wyśiwetl mnie"/>
+      <Counter name="Licznik" value="108" test="wyświetl mnie"/>
       <Counter name="Licznik drugi" value="0"/> 
     </div>
   );

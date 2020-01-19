@@ -27,15 +27,30 @@ constructor(props){
 }
 
 resetCounter=()=>{
-
+    this.setState({
+        counterView: 0
+    })
 }
+
+addOneToCounter=()=>{
+    this.setState({
+        counterView: this.state.counterView +1
+    })
+
+    
+}
+        resetToProps=()=>{
+            this.setState({
+                counterView: parseInt(this.props.value)
+            })
+        }
     render(){
 
         return(
             <div>
                 <Card>
-                    <Card.Body>{this.props.name + " wartość równa " + this.state.counterView+1 + this.state.napisView}</Card.Body>
-                    <ButtonTrzy/>
+                    <Card.Body>{this.props.name + " wartość równa " + this.state.counterView + this.state.napisView}</Card.Body>
+                    <ButtonTrzy resetCounterProps={this.resetCounter} addOneToCounterProps={this.addOneToCounter} resetToPropsProps={this.resetToProps}/>
                 </Card>
             </div>
         )
