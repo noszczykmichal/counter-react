@@ -47,7 +47,7 @@ addOneToCounter=()=>{
     render(){
 
         return(
-            <div>
+            <div className="myCard">
                 <Card>
                     <Card.Body>{this.props.name + " wartość równa " + this.state.counterView + this.state.napisView}</Card.Body>
                     <ButtonTrzy resetCounterProps={this.resetCounter} addOneToCounterProps={this.addOneToCounter} resetToPropsProps={this.resetToProps}/>
